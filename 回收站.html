@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>回收站</title>
+<link rel="stylesheet" type="text/css" href="css/reset_s.css" >
+<link rel="stylesheet" type="text/css" href="css/xp.css" >
+<script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+
+<script type="text/javascript"><!--主要内容高度 -->
+$(window).load(function(){
+	ConH();
+ });
+
+$(window).resize(function() {
+	ConH();
+});
+function ConH() {
+	var CH=$(window).height();
+	var ccH= parseInt(CH) -50;
+	$(".content").css("height", ccH);	
+}
+</script>
+<script type="text/javascript"><!--主要内容高度 -->
+$(window).load(function(){
+	CyonW();
+ });
+
+$(window).resize(function() {
+	CyonW();
+});
+function CyonW() {
+	var CyW=$(window).width();
+	var ccyW= parseInt(CyW) -290;
+	$(".cy").css("width", ccyW);	
+}
+</script>
+<script type="text/javascript"><!--右侧导航高度 -->
+$(window).load(function(){
+	CNnW();
+ });
+
+$(window).resize(function() {
+	CNnW();
+});
+function CNnW() {
+	var CNW=$(window).width();
+	var cNyW= parseInt(CNW) -410;
+	$(".cy_nav").css("width", cNyW);	
+}
+</script>
+<script type="text/javascript"><!--右侧内容高度 -->
+$(window).load(function(){
+	YbH();
+ });
+
+$(window).resize(function() {
+	YbH();
+});
+function YbH() {
+	var yCH=$(window).height();
+	var ybH= parseInt(yCH) -100;
+	$(".cy_con").css("height", ybH);	
+}
+</script>
+</head>
+
+<body>
+<!--头部内容 -->
+<div class="header">
+	<div class="logo"><img src="img/logo.png"></div>
+    <a href="#" class="h_btn">退出</a>
+    <div class="user">欢迎您：<span>001</span></div>
+</div>
+<!--头部内容-----------------end -->
+<!--主要内容 -->
+<div class="content">
+	<!--左侧内容a -->
+	<div class="cz">
+		<a href="#" class="cz_top arw_down">婷婷大壮（100/0）</a>
+        <div class="cz_top_nr">
+        	<div class="cz_c1"><span>影 &nbsp;  楼：</span>北京金夫人婚纱摄影</div>
+        	<div class="cz_c1"><span>订单号：</span>201604210012</div>
+        	<div class="cz_c1"><span>摄影师：</span>张伟波</div>
+        	<div class="cz_c1"><span>选片师：</span>小妹</div>
+        	<div class="cz_c1"><span>状 &nbsp; 态：</span>等待选片</div>
+        </div>
+        <a href="javascript:void(0)" class="cz_btn1" style="margin-top:75px;" id="xz_del">恢复所选</a>
+        <a href="javascript:void(0)" class="cz_btn1" id="qx">取消所选</a>
+        <a href="javascript:void(0)" class="cz_btn2" style="margin-top:75px;">恢复所选</a>
+        <a href="javascript:void(0)" class="cz_btn2">取消所选</a>
+    </div>
+    <!--左侧内容a-----------------end -->
+    <!--左侧内容b -->
+    <div class="cy">
+        <div class="cy_top">
+            <a href="#" class="cy_last">返回</a>
+        </div>
+        <div class="cy_con">
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic1"><img src="img/01.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="cyp_back" style="margin-left:15px;"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic2"><img src="img/02.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="cyp_back" style="margin-left:15px;"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        </div>
+    </div>
+	<!--左侧内容b-----------------end -->
+    <!--右侧内容 -->
+    
+	<!--右侧内容-----------------end -->
+</div>
+<!--主要内容-----------------end -->
+    <script><!--左侧内容脚本 -->
+	$(".cz_top").click(function(){
+		$(this).toggleClass('arw_up');
+		$(".cz_top_nr").slideToggle();
+		});
+	$(".cyp").click(function(){
+		$(".cz_btn2").hide().stop();
+		$(".cz_btn1").show().stop();
+		});
+	$("#qx,#xz_del").click(function(){
+		$(".cz_btn1").hide().stop();
+		$(".cz_btn2").show().stop();
+		});
+	$(".cyp").click(function(){
+		$(this).toggleClass('cyp_act');
+		});
+	$("#qx").click(function(){
+		$(".cyp").removeClass('cyp_act');
+		});
+	$("#xz_del").click(function(){
+		$(".cyp_act").remove();
+		});
+	$(".cyp_del").click(function(){
+		$(this).parent().parent().remove();
+		})
+	</script>
+</body>
+</html>

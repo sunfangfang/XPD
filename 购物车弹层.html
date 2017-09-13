@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>购物车弹层</title>
+<link rel="stylesheet" type="text/css" href="css/reset_s.css" >
+<link rel="stylesheet" type="text/css" href="css/gwt.css" >
+<script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+
+<script type="text/javascript"><!--主要内容高度 -->
+$(window).load(function(){
+	GtcH();
+ });
+
+$(window).resize(function() {
+	GtcH();
+});
+function GtcH() {
+	var Gtc=$(window).height();
+	var GtH= parseInt(Gtc) -50;
+	$(".gw_tc").css("height", GtH);	
+}
+
+$(window).load(function(){//购物弹层内容高度
+	GWH();
+ });
+
+$(window).resize(function() {
+	GWH();
+});
+function GWH() {
+	var GH=$(window).height();
+	var GcH= parseInt(GH) -320;
+	$(".gw_cc").css("maxHeight", GcH);	
+}
+
+
+</script>
+
+</head>
+<body style="background-color:black">
+<input name="" type="button" style="width:100px; height:30px;" id="button">
+<div class="gw_tc">
+	<div class="gw"><span>购物车</span><a href="#"></a></div>
+    <div class="gw_con">
+    	<ul class="gw_th">
+        	<li>名称</li>
+        	<li style="text-align:right;">单价</li>
+        	<li>操作</li>
+        </ul>
+   	    <div class="gw_cc">
+  			<ul class="gw_tb2">
+                <li><div class="gw_tit2"><img src="img/03.jpg"><span>时尚创意相片墙13</span></div></li>
+                <li>¥99</li>
+                <li>不可删</li>
+	    	</ul>
+            <ul class="gw_tb2">
+                <li><div class="gw_tit2"><img src="img/03.jpg"><span>时尚创意相片墙13</span></div></li>
+                <li>¥99</li>
+                <li>不可删</li>
+	    	</ul>
+            <ul class="gw_tb1">
+                <li><div class="gw_tit1"><img src="img/03.jpg"><span>时尚创意相片墙13</span></div></li>
+                <li>¥99</li>
+                <li><a href="#" class="gw_tc_del">删除</a></li>
+    	    </ul>
+            <ul class="gw_tb1">
+                <li><div class="gw_tit1"><img src="img/03.jpg"><span>时尚创意相片墙13</span></div></li>
+                <li>¥99</li>
+                <li><a href="#" class="gw_tc_del">删除</a></li>
+    	    </ul>
+            <ul class="gw_tb1">
+                <li><div class="gw_tit1"><img src="img/03.jpg"><span>时尚创意相片墙13</span></div></li>
+                <li>¥99</li>
+                <li><a href="#" class="gw_tc_del">删除</a></li>
+    	    </ul>
+            <ul class="gw_tb1">
+                <li><div class="gw_tit1"><img src="img/03.jpg"><span>时尚创意相片墙13</span></div></li>
+                <li>¥99</li>
+                <li><a href="#" class="gw_tc_del">删除</a></li>
+    	    </ul>
+            <ul class="gw_tb1">
+                <li><div class="gw_tit1"><img src="img/03.jpg"><span>时尚创意相片墙13</span></div></li>
+                <li>¥99</li>
+                <li><a href="#" class="gw_tc_del">删除</a></li>
+    	    </ul>
+            <ul class="gw_tb1">
+                <li><div class="gw_tit1"><img src="img/03.jpg"><span>时尚创意相片墙13</span></div></li>
+                <li>¥99</li>
+                <li><a href="#" class="gw_tc_del">删除</a></li>
+    	    </ul>
+            <ul class="gw_tb1">
+                <li><div class="gw_tit1"><img src="img/03.jpg"><span>时尚创意相片墙13</span></div></li>
+                <li>¥99</li>
+                <li><a href="#" class="gw_tc_del">删除</a></li>
+    	    </ul>
+            <ul class="gw_tb1">
+                <li><div class="gw_tit1"><img src="img/03.jpg"><span>时尚创意相片墙13</span></div></li>
+                <li>¥99</li>
+                <li><a href="#" class="gw_tc_del">删除</a></li>
+    	    </ul>
+            <ul class="gw_tb1">
+                <li><div class="gw_tit1"><img src="img/03.jpg"><span>时尚创意相片墙13</span></div></li>
+                <li>¥99</li>
+                <li><a href="#" class="gw_tc_del">删除</a></li>
+    	    </ul>
+            <ul class="gw_tb1">
+                <li><div class="gw_tit1"><img src="img/03.jpg"><span>时尚创意相片墙13</span></div></li>
+                <li>¥99</li>
+                <li><a href="#" class="gw_tc_del">删除</a></li>
+    	    </ul>
+            <ul class="gw_tb1">
+                <li><div class="gw_tit1"><img src="img/03.jpg"><span>时尚创意相片墙13</span></div></li>
+                <li>¥99</li>
+                <li><a href="#" class="gw_tc_del">删除</a></li>
+    	    </ul>
+            <ul class="gw_tb1">
+                <li><div class="gw_tit1"><img src="img/03.jpg"><span>时尚创意相片墙13</span></div></li>
+                <li>¥99</li>
+                <li><a href="#" class="gw_tc_del">删除</a></li>
+    	    </ul>
+        </div>
+    </div>
+    <div class="gw_bot">
+    	<div class="gw_b1" style="margin-top:15px;"><span>选片消费：</span>269.00=（4件商品（36+56+66）</div>
+    	<div class="gw_b1"><span>选片消费：</span>269.00=（4件商品（36+56+6））</div>
+        <div class="gw_b2">
+        	<span>共计：<small>9966.00</small></span>
+        	<span>共<small>4</small>件产品</span>
+        </div>
+  </div>
+</div>
+
+<script>
+$("#button").click(function(){//购物弹层效果
+	$(".gw_tc").animate({left:'290px',opacity:'1'});
+	});
+$(".gw a").click(function(){//购物弹层效果
+	$(".gw_tc").animate({left:'-510px',opacity:'0'});
+	});
+$(".gw_tc_del").click(function(){
+	$(this).parents("ul").remove();
+	});
+</script>
+
+</body>
+</html>

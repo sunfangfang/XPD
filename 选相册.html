@@ -1,0 +1,344 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>选相册</title>
+    <link rel="stylesheet" type="text/css" href="css/reset_s.css" >
+    <link rel="stylesheet" type="text/css" href="css/xc.css" >
+    <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+    <script type="text/javascript" src="js/jquery.fly.min.js"></script>
+    <script type="text/javascript" src="js/requestAnimationFrame.js"></script>
+    <script src="js/xc.js"></script>
+</head>
+
+<body>
+<!--头部内容 -->
+<div class="header">
+    <div class="logo"><img src="img/logo.png"></div>
+    <a href="#" class="h_btn">退出</a>
+    <div class="user">欢迎您：<span>001</span></div>
+</div>
+<!--头部内容-----------------end -->
+<!--主要内容 -->
+<div class="content">
+    <!--左侧内容a -->
+    <div class="cz">
+        <a href="#" class="cz_top arw_down">婷婷大壮（100/0）</a>
+        <div class="cz_top_nr">
+            <div class="cz_c1"><span>影 &nbsp;  楼：</span>北京金夫人婚纱摄影</div>
+            <div class="cz_c1"><span>订单号：</span>201604210012</div>
+            <div class="cz_c1"><span>摄影师：</span>张伟波</div>
+            <div class="cz_c1"><span>选片师：</span>小妹</div>
+            <div class="cz_c1"><span>状 &nbsp; 态：</span>等待选片</div>
+        </div>
+        <ul class="menu_ul">
+            <li>所有产品</li>
+            <li>优惠列表</li>
+            <li>热销产品</li>
+        </ul>
+        <div class="link_contain">
+            <ul class="link_ul">
+                <li class="arrow_down">相册</li>
+                <ul class="link_con">
+                    <li>18寸</li>
+                    <li>20寸</li>
+                </ul>
+                <li class="arrow_down">相框</li>
+                <li class="arrow_down">套系</li>
+                <li class="arrow_down">赠品</li>
+                <li class="arrow_down">圆形</li>
+                <li class="arrow_down">永恒之爱</li>
+                <li class="arrow_down">服装</li>
+                <li class="arrow_down">积分兑换礼品</li>
+            </ul>
+        </div>
+        <a href="#" class="cz_shopping" id="end"><span>购物车</span><small id="xc_num">8</small></a>
+    </div>
+    <!--左侧内容a-----------------end -->
+    <!--左侧内容b -->
+    <div class="cy">
+        <div class="cy_top">
+            <a href="选照片.html" class="cy_last xc_step">上一步</a>
+            <div class="cy_nav cyn2">
+                <a href="#" class="cy_n1 font_check">选择照片</a>
+                <a href="#" class="cy_n2 font_check">选购产品</a>
+                <a href="#" class="cy_n3">匹配照片</a>
+            </div>
+            <a href="匹配照片.html" class="cy_next xc_step">下一步</a>
+        </div>
+
+        <div class="cy_con">
+            <div class="search_con">
+                <div class="search_block">
+                    <input class="src_box" placeholder="搜索商品"/>
+                    <div class="src_term">
+                        <span class="asc">价格</span>
+                        <div class="line">|</div>
+                        <span  class="desc">价格</span>
+                        <div class="line">|</div>
+                        <span class="sj_time">上架时间</span>
+                    </div>
+                </div>
+            </div>
+            <div class="xc_con">
+                <div class="cyp_contain">
+                    <div class="cyp">
+                        <div class="cyp_div"><div class="cyp_pic"><img src="img/xc1.png"></div></div>
+                        <div class="cyp_text">18寸相册手工毕业结贴...</div>
+                        <div class="price">1000￥</div>
+                        <div class="cyp_btn">加入购物车</div>
+                        <!--<div class="cyp_sl">0</div>-->
+                    </div>
+                    <div class="cyp">
+                        <div class="cyp_div"><div class="cyp_pic"><img src="img/xc2.png"></div></div>
+                        <div class="cyp_text">18寸相册手工毕业结贴...</div>
+                        <div class="price">1000￥</div>
+                        <div class="cyp_btn">加入购物车</div>
+                        <!--<div class="cyp_sl">0</div>-->
+                    </div>
+                    <div class="cyp">
+                        <div class="cyp_div"><div class="cyp_pic"><img src="img/xc1.png"></div></div>
+                        <div class="cyp_text">18寸相册手工毕业结贴...</div>
+                        <div class="price">1000￥</div>
+                        <div class="cyp_btn">加入购物车</div>
+                        <!--<div class="cyp_sl">0</div>-->
+                    </div>
+                    <div class="cyp">
+                        <div class="cyp_div"><div class="cyp_pic"><img src="img/xc1.png"></div></div>
+                        <div class="cyp_text">18寸相册手工毕业结贴...</div>
+                        <div class="price">1000￥</div>
+                        <div class="cyp_btn">加入购物车</div>
+                        <!--<div class="cyp_sl">0</div>-->
+                    </div>
+                    <div class="cyp">
+                        <div class="cyp_div"><div class="cyp_pic"><img src="img/xc1.png"></div></div>
+                        <div class="cyp_text">18寸相册手工毕业结贴...</div>
+                        <div class="price">1000￥</div>
+                        <div class="cyp_btn">加入购物车</div>
+                        <!--<div class="cyp_sl">0</div>-->
+                    </div>
+                    <div class="cyp">
+                        <div class="cyp_div"><div class="cyp_pic"><img src="img/xc1.png"></div></div>
+                        <div class="cyp_text">18寸相册手工毕业结贴...</div>
+                        <div class="price">1000￥</div>
+                        <div class="cyp_btn">加入购物车</div>
+                        <!--<div class="cyp_sl">0</div>-->
+                    </div>
+                    <div class="cyp">
+                        <div class="cyp_div"><div class="cyp_pic"><img src="img/xc1.png"></div></div>
+                        <div class="cyp_text">18寸相册手工毕业结贴...</div>
+                        <div class="price">1000￥</div>
+                        <div class="cyp_btn">加入购物车</div>
+                        <!--<div class="cyp_sl">0</div>-->
+                    </div>
+                    <div class="cyp">
+                        <div class="cyp_div"><div class="cyp_pic"><img src="img/xc2.png"></div></div>
+                        <div class="cyp_text">18寸相册手工毕业结贴...</div>
+                        <div class="price">1000￥</div>
+                        <div class="cyp_btn">加入购物车</div>
+                        <!--<div class="cyp_sl">0</div>-->
+                    </div>
+                    <div class="cyp">
+                        <div class="cyp_div"><div class="cyp_pic"><img src="img/xc1.png"></div></div>
+                        <div class="cyp_text">18寸相册手工毕业结贴...</div>
+                        <div class="price">1000￥</div>
+                        <div class="cyp_btn">加入购物车</div>
+                        <!--<div class="cyp_sl">0</div>-->
+                    </div>
+                    <div class="cyp">
+                        <div class="cyp_div"><div class="cyp_pic"><img src="img/xc1.png"></div></div>
+                        <div class="cyp_text">18寸相册手工毕业结贴...</div>
+                        <div class="price">1000￥</div>
+                        <div class="cyp_btn">加入购物车</div>
+                        <!--<div class="cyp_sl">0</div>-->
+                    </div>
+                    <div class="cyp">
+                        <div class="cyp_div"><div class="cyp_pic"><img src="img/xc1.png"></div></div>
+                        <div class="cyp_text">18寸相册手工毕业结贴...</div>
+                        <div class="price">1000￥</div>
+                        <div class="cyp_btn">加入购物车</div>
+                        <!--<div class="cyp_sl">0</div>-->
+                    </div>
+                    <div class="cyp">
+                        <div class="cyp_div"><div class="cyp_pic"><img src="img/xc1.png"></div></div>
+                        <div class="cyp_text">18寸相册手工毕业结贴...</div>
+                        <div class="price">1000￥</div>
+                        <div class="cyp_btn">加入购物车</div>
+                        <!--<div class="cyp_sl">0</div>-->
+                    </div>
+                    <div class="cyp">
+                        <div class="cyp_div"><div class="cyp_pic"><img src="img/xc1.png"></div></div>
+                        <div class="cyp_text">18寸相册手工毕业结贴...</div>
+                        <div class="price">1000￥</div>
+                        <div class="cyp_btn">加入购物车</div>
+                        <!--<div class="cyp_sl">0</div>-->
+                    </div>
+                    <div class="cyp">
+                        <div class="cyp_div"><div class="cyp_pic"><img src="img/xc2.png"></div></div>
+                        <div class="cyp_text">18寸相册手工毕业结贴...</div>
+                        <div class="price">1000￥</div>
+                        <div class="cyp_btn">加入购物车</div>
+                        <!--<div class="cyp_sl">0</div>-->
+                    </div>
+                    <div class="paging_con">
+                        <div class="paging_block">
+                            <div class="home_page"><span>首页</span></div>
+                            <div class="page_num"><span style="color:#999;">12</span>/<span>24</span></div>
+                            <div class="flip"><span>上一页</span><div class="line" style="color: #666">|</div><span>下一页</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--左侧内容b-----------------end -->
+    <!--右侧内容 -->
+
+    <!--右侧内容-----------------end -->
+</div>
+<!--主要内容-----------------end -->
+<div class="gw_tc">
+    <div class="gw"><span>购物车</span><a href="#"></a></div>
+    <div class="gw_con">
+        <ul class="gw_th">
+            <li>序号</li>
+            <li>商品</li>
+            <li style="text-align:right;">单价</li>
+            <li>数量</li>
+            <li>小计</li>
+            <li>操作</li>
+        </ul>
+        <div class="gw_cc">
+            <div class="undel">
+                <ul class="gw_tb2">
+                    <li><label><input type="checkbox"><span>1111</span></label></li>
+                    <li><div class="gw_tit2 gw_tit"><img src="img/03.jpg"><span class="pro_name">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</span><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div></div></li>
+                    <li></li>
+                    <li></li>
+                    <li>99¥</li>
+                    <li>不可删</li>
+                </ul>
+                <ul class="gw_tb2">
+                    <li><label><input type="checkbox"><span>1</span></label></li>
+                    <li><div class="gw_tit2 gw_tit"><img src="img/03.jpg"><span class="pro_name">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</span><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div></div></li>
+                    <li></li>
+                    <li></li>
+                    <li>99¥</li>
+                    <li>不可删</li>
+                </ul>
+            </div>
+            <div class="del">
+                <ul class="gw_tb1">
+                    <li><label><input type="checkbox"><span>1</span></label></li>
+                    <li><div class="gw_tit1 gw_tit"><img src="img/03.jpg"><span class="pro_name">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</span><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div></div></li>
+                    <li>99¥</li>
+                    <li><div class="number"><span class="rdu_num">-</span><span class="total">2</span><span class="add_num">+</span></div></li>
+                    <li>198¥</li>
+                    <li><a href="#" class="gw_tc_del">删除</a></li>
+                </ul>
+
+                <ul class="gw_tb1">
+                    <li><label><input type="checkbox"><span>1</span></label></li>
+                    <li><div class="gw_tit1 gw_tit"><img src="img/03.jpg"><span class="pro_name">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</span><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div></div></li>
+                    <li>99¥</li>
+                    <li><div class="number"><span class="rdu_num">-</span><span class="total">2</span><span class="add_num">+</span></div></li>
+                    <li>198¥</li>
+                    <li><a href="#" class="gw_tc_del">删除</a></li>
+                </ul>
+
+                <ul class="gw_tb1">
+                    <li><label><input type="checkbox"><span>1</span></label></li>
+                    <li><div class="gw_tit1 gw_tit"><img src="img/03.jpg"><span class="pro_name">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</span><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div></div></li>
+                    <li>99¥</li>
+                    <li><div class="number"><span class="rdu_num">-</span><span class="total">2</span><span class="add_num">+</span></div></li>
+                    <li>198¥</li>
+                    <li><a href="#" class="gw_tc_del">删除</a></li>
+                </ul>
+                <ul class="gw_tb1">
+                    <li><label><input type="checkbox"><span>1</span></label></li>
+                    <li><div class="gw_tit1 gw_tit"><img src="img/03.jpg"><span class="pro_name">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</span><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div></div></li>
+                    <li>99¥</li>
+                    <li><div class="number"><span class="rdu_num">-</span><span class="total">2</span><span class="add_num">+</span></div></li>
+                    <li>198¥</li>
+                    <li><a href="#" class="gw_tc_del">删除</a></li>
+                </ul>
+                <ul class="gw_tb1">
+                    <li><label><input type="checkbox"><span>1</span></label></li>
+                    <li><div class="gw_tit1 gw_tit"><img src="img/03.jpg"><span class="pro_name">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</span><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div></div></li>
+                    <li>99¥</li>
+                    <li><div class="number"><span class="rdu_num">-</span><span class="total">2</span><span class="add_num">+</span></div></li>
+                    <li>198¥</li>
+                    <li><a href="#" class="gw_tc_del">删除</a></li>
+                </ul>
+                <ul class="gw_tb1">
+                    <li><label><input type="checkbox"><span>1</span></label></li>
+                    <li><div class="gw_tit1 gw_tit"><img src="img/03.jpg"><span class="pro_name">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</span><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div></div></li>
+                    <li>99¥</li>
+                    <li><div class="number"><span class="rdu_num">-</span><span class="total">2</span><span class="add_num">+</span></div></li>
+                    <li>198¥</li>
+                    <li><a href="#" class="gw_tc_del">删除</a></li>
+                </ul>
+                <ul class="gw_tb1">
+                    <li><label><input type="checkbox"><span>1</span></label></li>
+                    <li><div class="gw_tit1 gw_tit"><img src="img/03.jpg"><span class="pro_name">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</span><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div></div></li>
+                    <li>99¥</li>
+                    <li><div class="number"><span class="rdu_num">-</span><span class="total">2</span><span class="add_num">+</span></div></li>
+                    <li>198¥</li>
+                    <li><a href="#" class="gw_tc_del">删除</a></li>
+                </ul>
+                <ul class="gw_tb1">
+                    <li><label><input type="checkbox"><span>1</span></label></li>
+                    <li><div class="gw_tit1 gw_tit"><img src="img/03.jpg"><span class="pro_name">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</span><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div></div></li>
+                    <li>99¥</li>
+                    <li><div class="number"><span class="rdu_num">-</span><span class="total">2</span><span class="add_num">+</span></div></li>
+                    <li>198¥</li>
+                    <li><a href="#" class="gw_tc_del">删除</a></li>
+                </ul>
+                <ul class="gw_tb1">
+                    <li><label><input type="checkbox"><span>1</span></label></li>
+                    <li><div class="gw_tit1 gw_tit"><img src="img/03.jpg"><span class="pro_name">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</span><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div></div></li>
+                    <li>99¥</li>
+                    <li><div class="number"><span class="rdu_num">-</span><span class="total">2</span><span class="add_num">+</span></div></li>
+                    <li>198¥</li>
+                    <li><a href="#" class="gw_tc_del">删除</a></li>
+                </ul>
+                <ul class="gw_tb1">
+                    <li><label><input type="checkbox"><span>1</span></label></li>
+                    <li><div class="gw_tit1 gw_tit"><img src="img/03.jpg"><span class="pro_name">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</span><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div></div></li>
+                    <li>99¥</li>
+                    <li><div class="number"><span class="rdu_num">-</span><span class="total">2</span><span class="add_num">+</span></div></li>
+                    <li>198¥</li>
+                    <li><a href="#" class="gw_tc_del">删除</a></li>
+                </ul>
+                <ul class="gw_tb1">
+                    <li><label><input type="checkbox"><span>1</span></label></li>
+                    <li><div class="gw_tit1 gw_tit"><img src="img/03.jpg"><span class="pro_name">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</span><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div></div></li>
+                    <li>99¥</li>
+                    <li><div class="number"><span class="rdu_num">-</span><span class="total">2</span><span class="add_num">+</span></div></li>
+                    <li>198¥</li>
+                    <li><a href="#" class="gw_tc_del">删除</a></li>
+                </ul>
+                <ul class="gw_tb1">
+                    <li><label><input type="checkbox"><span>1</span></label></li>
+                    <li><div class="gw_tit1 gw_tit"><img src="img/03.jpg"><span class="pro_name">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</span><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div></div></li>
+                    <li>99¥</li>
+                    <li><div class="number"><span class="rdu_num">-</span><span class="total">2</span><span class="add_num">+</span></div></li>
+                    <li>198¥</li>
+                    <li><a href="#" class="gw_tc_del">删除</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="gw_bot">
+        <div class="quanx"><label><input type="checkbox"><span>全选</span></label><a href="#">删除</a></div>
+        <div class="gw_b1"><span>选片消费：</span><i>269.00=（4件商品（36+56+6+36+56+6+36+56+636+56+636+56+636+56+636+56+636+56+636+56+636+56+636+56+636+56+636+56+636+56+636+56+636+56+636+56+6））</i></div>
+        <div class="gw_b2">
+            <span>共计：<small>9966.00</small></span>
+            <span>共 <small>4</small> 件产品</span>
+        </div>
+    </div>
+</div>
+
+<!--<div id="msg">已成功加入购物车！</div>-->
+</body>
+</html>

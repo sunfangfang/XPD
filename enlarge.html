@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>放大图片</title>
+    <link rel="stylesheet" href="css/top.css">
+    <link rel="stylesheet" href="css/enlarge.css">
+    <link rel="stylesheet" href="css/bzt.css">
+    <script src="js/jquery.1.11.1.js"></script>
+    <script src="js/enlarge.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo"><img src="img/logo.png"></div>
+        <a href="#" class="h_btn">退出</a>
+        <div class="user">欢迎您：<span>001</span></div>
+    </div>
+    <div class="com_top">
+        <a href="匹配照片.html" class="com_back">返回</a>
+        <div class="top_contain">
+            <div class="top_block">
+                <a href="#" class="reduce set_btn">-</a>
+                <span>100%</span>
+                <a href="#" class="add set_btn">+</a>
+            </div>
+            <div class="top_block">
+                <span class="adapt set_btn">适合屏幕</span>
+            </div>
+            <div class="top_block">
+                <i class="refresh set_btn"></i>
+                <div class="line">|</div>
+                <i class="forward set_btn"></i>
+            </div>
+            <div class="top_block">
+                <i class="left set_btn"></i>
+                <div class="line">|</div>
+                <span class="pic_num">1/100</span>
+                <div class="line">|</div>
+                <i class="right set_btn"></i>
+            </div>
+        </div>
+    </div>
+    <div class="enlarge_con">
+        <div class="pic_block">
+            <img src="img/large_img.png" alt="">
+        </div>
+    </div>
+    <div class="menu_con">
+        <div class="menu_block">
+            <span class="join">加入</span>
+            <div class="line">|</div>
+            <span class="tagging">标注</span>
+            <div class="line">|</div>
+            <span class="remark">备注</span>
+            <div class="line">|</div>
+            <span class="del">删除</span>
+            <div class="bz_con" id="bz">
+                <textarea name="" id="beizhu" cols="30" rows="10" placeholder="写备注"></textarea>
+                <div class="save">保存</div>
+            </div>
+        </div>
+    </div>
+
+<!--标注弹层-->
+    <div class="black_bg">
+        <div class="bz_div">
+            <div class="bz_top">
+                <div class="bz_d1">
+                    <a href="#" class="bz_btn1" id="line_btn" style="margin-left:15px;"><span class="bz_m1 bc1"></span></a><!--线条宽度bz_m1到bz_m4 ，颜色c1到c7-->
+                    <a href="#" class="bz_btn1" id="color_btn"><span class="bz_c bc1"></span></a>
+                    <div class="line1"></div>
+                    <a href="#" class="bz_btn1 bz_b1"></a>
+                    <a href="#" class="bz_btn1 bz_b2"></a>
+                    <a href="#" class="bz_btn1 bz_b3"></a>
+                    <a href="#" class="bz_btn1 bz_b4"></a>
+                    <a href="#" class="bz_btn1 bz_b5"></a>
+                    <a href="#" class="bz_btn2">取消</a>
+                    <a href="#" class="bz_btn3">保存</a>
+                </div>
+                <div id="line_show" class="btn_show" style="margin-left:15px;">
+                    <div class="line_div"><span class="bz_m1 bc1"></span></div>
+                    <div class="line_div"><span class="bz_m2 bc1"></span></div>
+                    <div class="line_div"><span class="bz_m3 bc1"></span></div>
+                    <div class="line_div"><span class="bz_m4 bc1"></span></div>
+                </div>
+                <div id="color_show" class="btn_show" style="margin-left:70px;">
+                    <div class="line_div"><span class="bz_c bc1"></span></div>
+                    <div class="line_div"><span class="bz_c bc2"></span></div>
+                    <div class="line_div"><span class="bz_c bc3"></span></div>
+                    <div class="line_div"><span class="bz_c bc4"></span></div>
+                    <div class="line_div"><span class="bz_c bc5"></span></div>
+                    <div class="line_div"><span class="bz_c bc6"></span></div>
+                    <div class="line_div"><span class="bz_c bc7"></span></div>
+                </div>
+            </div>
+            <div class="bz_pic">
+                <div class="bz_pw"><img src="img/images/xp60.jpg"></div>
+            </div>
+            <div class="bz_in"><textarea placeholder="请输入文字"></textarea></div>
+        </div>
+    </div>
+</body>
+</html>

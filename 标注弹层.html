@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>标注弹层</title>
+<link rel="stylesheet" type="text/css" href="css/reset_s.css" >
+<link rel="stylesheet" type="text/css" href="css/bzt.css" >
+<script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+
+<script type="text/javascript"><!--主要内容高度 -->
+$(window).load(function(){
+	PicH();
+ });
+
+$(window).resize(function() {
+	PicH();
+});
+function PicH() {
+	var PH=$(window).height();
+	var PcH= parseInt(PH) -120;
+	$(".bz_pic").css("height", PcH);	
+}
+</script>
+
+<script type="text/javascript"><!--图片高 -->
+$(window).load(function(){
+	PiciH();
+ });
+
+$(window).resize(function() {
+	PiciH();
+});
+function PiciH() {
+	var PiH=$(window).height();
+	var PciH= parseInt(PiH) -140;
+	$(".bz_pic img").css("maxHeight", PciH);	
+}
+</script>
+</head>
+<body style="background-color:black">
+<input name="" type="button" style="width:100px; height:30px;" id="button">
+
+<div class="black_bg">
+	<div class="bz_div">
+    	<div class="bz_top">
+        	<div class="bz_d1">
+            	<a href="#" class="bz_btn1" id="line_btn" style="margin-left:15px;"><span class="bz_m1 bc1"></span></a><!--线条宽度bz_m1到bz_m4 ，颜色c1到c7-->
+            	<a href="#" class="bz_btn1" id="color_btn"><span class="bz_c bc1"></span></a>
+                <div class="line1"></div>
+            	<a href="#" class="bz_btn1 bz_b1"></a>
+            	<a href="#" class="bz_btn1 bz_b2"></a>
+            	<a href="#" class="bz_btn1 bz_b3"></a>
+            	<a href="#" class="bz_btn1 bz_b4"></a>
+            	<a href="#" class="bz_btn1 bz_b5"></a>
+                <a href="#" class="bz_btn2">取消</a>
+                <a href="#" class="bz_btn3">保存</a>
+            </div>
+            <div id="line_show" class="btn_show" style="margin-left:15px;">
+            	<div class="line_div"><span class="bz_m1 bc1"></span></div>
+                <div class="line_div"><span class="bz_m2 bc1"></span></div>
+                <div class="line_div"><span class="bz_m3 bc1"></span></div>
+                <div class="line_div"><span class="bz_m4 bc1"></span></div>
+            </div>
+            <div id="color_show" class="btn_show" style="margin-left:70px;">
+            	<div class="line_div"><span class="bz_c bc1"></span></div>
+            	<div class="line_div"><span class="bz_c bc2"></span></div>
+            	<div class="line_div"><span class="bz_c bc3"></span></div>
+            	<div class="line_div"><span class="bz_c bc4"></span></div>
+            	<div class="line_div"><span class="bz_c bc5"></span></div>
+            	<div class="line_div"><span class="bz_c bc6"></span></div>
+            	<div class="line_div"><span class="bz_c bc7"></span></div>
+            </div>
+        </div>
+        <script>
+		$(".bz_btn1").click(function(){
+			$(".bz_btn1").removeClass("btn1_act");
+			$(this).addClass("btn1_act");
+			});
+		$("#line_btn,#color_btn").blur(function(){
+			$(this).removeClass("btn1_act");
+			});
+		$("#line_btn").click(function(){
+			$("#line_show").slideDown();
+			});
+		$("#line_btn").blur(function(){
+			$("#line_show").slideUp();
+			});
+		$("#color_btn").click(function(){
+			$("#color_show").slideDown();
+			});
+		$("#color_btn").blur(function(){
+			$("#color_show").slideUp();
+			});
+		$(".bz_b5").click(function(){
+			$(".bz_in").show();
+			});
+		</script>
+        <div class="bz_pic">
+        	<div class="bz_pw"><img src="img/images/xp60.jpg"></div> 
+        </div>
+		<div class="bz_in"><textarea placeholder="请输入文字"></textarea></div>
+    </div>
+</div>
+
+
+<script>
+$(function(){
+
+    //标注、备注、删除框的拖动功能
+    var dragging  = false;
+    var menu=$(".bz_in");
+    var xx,yy;
+    menu.bind('mousedown',function(e){
+        xx= e.pageX;
+        yy= e.pageY;
+        var	ATop=yy-menu.offset().top,
+            ALeft=xx-menu.offset().left,
+            WW=parseInt($(window).width()),
+            WH=parseInt($(window).height());
+        dragging=true;
+        $(document).mousemove(function(e){
+            if(dragging){
+                var top=e.pageY-ATop,
+                    left=e.pageX-ALeft;
+                top=(top<0)?0:top;
+                left=(left<0)?0:left;
+                top=(top>=WH-30)?WH-30:top;
+                left=(left>=WW-220)?WW-220:left;
+                menu.css({"top":top+'px',"left":left+'px'});
+            }
+            e.preventDefault();
+        });
+    });
+    $(document).mouseup(function(e) {
+        dragging = false;
+        e.cancelBubble = true;
+    });
+
+});
+</script>
+<script>
+$("#button").click(function(){//标注弹层效果
+	$(".black_bg").show();
+	});
+$("#bz_btn2").click(function(){
+	$(".black_bg").hide();
+	});
+</script>
+</body>
+</html>

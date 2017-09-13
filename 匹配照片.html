@@ -1,0 +1,724 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>匹配照片</title>
+<link rel="stylesheet" type="text/css" href="css/reset_s.css" >
+<link rel="stylesheet" type="text/css" href="css/xp.css" >
+<link rel="stylesheet" type="text/css" href="css/ppt.css" >
+<script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+<script type="text/javascript" src="js/match.js"></script>
+
+<script type="text/javascript"><!--主要内容高度 -->
+$(function(){
+	ConH();
+	CyonW();
+	CNnW();
+	YbH();
+	GtcH();
+	GWH();
+ });
+
+$(window).resize(function() {
+	ConH();
+	CyonW();
+	CNnW();
+	YbH();
+	GtcH();
+	GWH();
+});
+function ConH() {
+	var CH=$(window).height();
+	var ccH= parseInt(CH) -50;
+	$(".content").css("height", ccH);	
+}
+    var link;
+    function allowDrop(ev)
+    {
+        ev.preventDefault();
+    }
+
+    function drag(ev)
+    {
+        link=ev.target.src;
+    }
+
+    function drop(ev)
+    {
+        var PNode=ev.target;
+        if(ev.target.hasAttribute("src")){
+            PNode=ev.target.parentNode;
+        }
+        PNode.innerHTML = "";
+        ev.preventDefault();
+        var CNode=document.createElement('img');
+        CNode.setAttribute("src",link);
+        PNode.appendChild(CNode);
+    }
+function CyonW() {
+	var CyW=$(window).width();
+	var ccyW= parseInt(CyW) -290;
+	$(".cy").css("width", ccyW);	
+}
+function CNnW() {
+	var CNW=$(window).width();
+	var cNyW= parseInt(CNW) -515;
+	$(".cy_nav").css("width", cNyW);	
+}
+function YbH() {
+	var yCH=$(window).height();
+	var ybH= parseInt(yCH) -100;
+	$(".cy_con").css("height", ybH);	
+}
+function GtcH() {
+	var Gtc=$(window).height();
+	var GtH= parseInt(Gtc) -50;
+	$(".pp_tc,.pp_tc2").css("height", GtH);	
+} 
+function GWH() {
+	var GH=$(window).height();
+	var GcH= parseInt(GH) -200;
+	$("#pca").css("height", GcH);	
+}
+</script>
+
+</head>
+
+<body>
+<!--头部内容 -->
+<div class="header">
+	<div class="logo"><img src="img/logo.png"></div>
+    <a href="#" class="h_btn">退出</a>
+    <div class="user">欢迎您：<span>001</span></div>
+</div>
+<!--头部内容-----------------end -->
+<!--主要内容 -->
+
+<div class="content">
+	<!--左侧内容a -->
+	<div class="cz">
+		<a href="#" class="cz_top arw_down">婷婷大壮（100/0）</a>
+        <div class="cz_top_nr">
+        	<div class="cz_c1"><span>影 &nbsp;  楼：</span>北京金夫人婚纱摄影</div>
+        	<div class="cz_c1"><span>订单号：</span>201604210012</div>
+        	<div class="cz_c1"><span>摄影师：</span>张伟波</div>
+        	<div class="cz_c1"><span>选片师：</span>小妹</div>
+        	<div class="cz_c1"><span>状 &nbsp; 态：</span>等待选片</div>
+        </div>
+        <a href="javascript:void(0)" class="cz_btn3" id="xzxc">选择相册</a>
+        <div class="pic_focus">
+            <div class="long">
+                <div class="ppic"><img src="img/01.png"></div>
+                <div class="ppic"><img src="img/images/xp1.jpg"></div>
+                <div class="ppic"><img src="img/images/xp2.jpg"></div>
+                <div class="ppic"><img src="img/images/xp3.jpg"></div>
+                <div class="ppic"><img src="img/images/xp4.jpg"></div>
+            </div>
+            <a href="#" class="p_arw_l"></a>
+            <a href="#" class="p_arw_r"></a>
+        </div>
+        <div class="pic_sl"><span>18寸相册</span><strong>0 / 40</strong></div>
+        <a href="javascript:void(0)" class="cz_btn1" id="cc_zp">此产品内照片</a>
+        <a href="javascript:void(0)" class="cz_btn1">加入选中照片</a>
+        <a href="javascript:void(0)" class="cz_btn1" id="qx">取消所选</a>
+        <a href="javascript:void(0)" class="cz_btn2">此产品内照片</a>
+        <a href="javascript:void(0)" class="cz_btn2">加入选中照片</a>
+        <a href="javascript:void(0)" class="cz_btn2">取消所选</a>
+    </div>
+    <!--左侧内容a-----------------end -->
+    <!--右侧内容 -->
+    <div class="cy">
+        <div class="cy_top">
+            <a href="选相册.html" class="cy_last xc_step">上一步</a>
+        	<div class="cy_nav cyn3"> <!--全部完成cyn2 -->
+            	<a href="#" class="cy_n1 font_check">选择照片</a>
+            	<a href="#" class="cy_n2 font_check">选购产品</a>
+            	<a href="#" class="cy_n3 font_check">匹配照片</a>
+            </div>
+            <a href="确认无误.html" class="cy_next xc_step">确定</a>
+        </div>
+        
+        <div class="cy_con">
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic1"><img src="img/01.png"></div><div class="cyp_sl">20</div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic2"><img src="img/02.png"></div><div class="cyp_sl2">20</div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic2"><img src="img/02.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic2"><img src="img/02.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic1"><img src="img/01.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic2"><img src="img/02.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic2"><img src="img/02.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic2"><img src="img/02.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic1"><img src="img/01.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic2"><img src="img/02.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic2"><img src="img/02.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic2"><img src="img/02.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic1"><img src="img/01.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic2"><img src="img/02.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic2"><img src="img/02.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic2"><img src="img/02.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic1"><img src="img/01.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic2"><img src="img/02.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic2"><img src="img/02.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic2"><img src="img/02.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic1"><img src="img/01.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic2"><img src="img/02.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic2"><img src="img/02.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic2"><img src="img/02.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic1"><img src="img/01.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic2"><img src="img/02.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic2"><img src="img/02.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic2"><img src="img/02.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic1"><img src="img/01.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic2"><img src="img/02.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic2"><img src="img/02.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        	<div class="cyp">
+            	<div class="cyp_div"><div class="cyp_pic2"><img src="img/02.png"></div></div>
+                <div class="cyp_btn"><a href="#" class="zoom"></a><a href="#" class="cyp_file"></a></div>
+                <div class="cyp_text">(01)王腾4-21 张伟波 阿旺...</div>
+            </div>
+        </div>
+        
+    </div>
+    <!--右侧内容-----------------end -->
+   
+</div>
+<!--主要内容-----------------end -->
+
+<div class="pp_tc">
+	<div class="pp"><span>选择相册</span><a href="#" id="pp_c1"></a></div>
+    <div class="pp_con">
+   	    <div class="pp_tit"><span>共15件产品</span><a href="#" id="pc_add">添加相册</a></div>
+        <div class="pp_cc" id="pca">
+        	<div class="pc">
+            	<div class="pc_iw"><img src="img/01.png"></div>
+                <div class="photo_name">
+                    <div class="pc_name">18寸相册</div><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div>
+                </div>
+                <div class="pc_sl">6 / 40</div>
+            </div>
+        	<div class="pc">
+            	<div class="pc_iw"><img src="img/01.png"></div>
+                <div class="photo_name">
+                    <div class="pc_name">18寸相册</div><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div>
+                </div>
+                <div class="pc_sl">6 / 40</div>
+            </div>
+        	<div class="pc">
+            	<div class="pc_ih"><img src="img/02.png"></div>
+                <div class="photo_name">
+                    <div class="pc_name">18寸相册</div><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div>
+                </div>
+                <div class="pc_sl">6 / 40</div>
+            </div>
+        	<div class="pc">
+            	<div class="pc_ih"><img src="img/02.png"></div>
+                <div class="photo_name">
+                    <div class="pc_name">18寸相册</div><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div>
+                </div>
+                <div class="pc_sl">6 / 40</div>
+            </div>
+        	<div class="pc">
+            	<div class="pc_iw"><img src="img/01.png"></div>
+                <div class="photo_name">
+                    <div class="pc_name">18寸相册</div><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div>
+                </div>
+                <div class="pc_sl">6 / 40</div>
+            </div>
+        	<div class="pc">
+            	<div class="pc_iw"><img src="img/01.png"></div>
+                <div class="photo_name">
+                    <div class="pc_name">18寸相册</div><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div>
+                </div>
+                <div class="pc_sl">6 / 40</div>
+            </div>
+        	<div class="pc">
+            	<div class="pc_ih"><img src="img/02.png"></div>
+                <div class="photo_name">
+                    <div class="pc_name">18寸相册</div><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div>
+                </div>
+                <div class="pc_sl">6 / 40</div>
+            </div>
+        	<div class="pc">
+            	<div class="pc_ih"><img src="img/02.png"></div>
+                <div class="photo_name">
+                    <div class="pc_name">18寸相册</div><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div>
+                </div>
+                <div class="pc_sl">6 / 40</div>
+            </div>
+        	<div class="pc">
+            	<div class="pc_iw"><img src="img/01.png"></div>
+                <div class="photo_name">
+                    <div class="pc_name">18寸相册</div><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div>
+                </div>
+                <div class="pc_sl">6 / 40</div>
+            </div>
+        	<div class="pc">
+            	<div class="pc_iw"><img src="img/01.png"></div>
+                <div class="photo_name">
+                    <div class="pc_name">18寸相册</div><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div>
+                </div>
+                <div class="pc_sl">6 / 40</div>
+
+            </div>
+        	<div class="pc">
+            	<div class="pc_ih"><img src="img/02.png"></div>
+                <div class="photo_name">
+                    <div class="pc_name">18寸相册</div><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div>
+                </div>
+                <div class="pc_sl">6 / 40</div>
+            </div>
+        	<div class="pc pc_act">
+            	<div class="pc_ih"><img src="img/02.png"></div>
+                <div class="photo_name">
+                    <div class="pc_name">18寸相册</div><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div>
+                </div>
+                <div class="pc_sl">6 / 40</div>
+            </div>
+        	<div class="pc">
+            	<div class="pc_iw"><img src="img/01.png"></div>
+                <div class="photo_name">
+                    <div class="pc_name">18寸相册</div><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div>
+                </div>
+                <div class="pc_sl">6 / 40</div>
+            </div>
+        	<div class="pc">
+            	<div class="pc_iw"><img src="img/01.png"></div>
+                <div class="photo_name">
+                    <div class="pc_name">18寸相册</div><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div>
+                </div>
+                <div class="pc_sl">6 / 40</div>
+            </div>
+        	<div class="pc">
+            	<div class="pc_ih"><img src="img/02.png"></div>
+                <div class="photo_name">
+                    <div class="pc_name">18寸相册</div><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div>
+                </div>
+                <div class="pc_sl">6 / 40</div>
+            </div>
+        	<div class="pc">
+            	<div class="pc_ih"><img src="img/02.png"></div>
+                <div class="photo_name">
+                    <div class="pc_name">18寸相册</div><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div>
+                </div>
+                <div class="pc_sl">6 / 40</div>
+            </div>
+        	<div class="pc">
+            	<div class="pc_iw"><img src="img/01.png"></div>
+                <div class="photo_name">
+                    <div class="pc_name">18寸相册</div><div class="title_show">时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13时尚创意相片墙13</div>
+                </div>
+                <div class="pc_sl">6 / 40</div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<script>
+$(".cz_btn3").click(function(){//匹配相册弹层效果
+	$(".pp_tc").animate({left:'290px',opacity:'1'});
+	});
+$("#pp_c1").click(function(){//匹配相册弹层效果
+	$(".pp_tc").animate({left:'-655px',opacity:'0'});
+	});
+$(".pc").each(function(i){
+    $(this).data("index",i);
+});
+$(".pc").click(function(){
+    var i=$(this).data("index");
+    $(".pc").removeClass("pc_act");
+	$(this).addClass("pc_act");
+	});
+$("#pc_add").click(function(){
+	$(".pc_act").remove();
+	});
+</script>
+
+<div class="pp_tc2"><!--产品照片侧推内容 -->
+	<div class="pp"><span>此产品内照片</span><a href="#" id="pp_c2"></a></div>
+    <div class="pp_con">
+   	    <div class="pp_tit"><span>18寸相册</span><span style="float:right">6 / 40</span></div>
+        <div class="pp_cc">
+        	<div class="pp_c1">
+            	<div class="pp_fm">
+                	<div class="pp_f1" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="pp_f_name">封面</div>
+                </div>
+            	<div class="pp_fm">
+                    <div class="pp_f2" id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="pp_f_name">封底</div>
+                </div>
+            </div>
+            <div class="pp_c_tit">内容</div>
+            <div class="pp_c2" id="pcb">
+            	<div class="pp_p">
+                	<div class="pp_piw"><img src="img/01.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a> 
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_pih"><img src="img/02.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div> 
+            	<div class="pp_p">
+                	<div class="pp_pih"><img src="img/02.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_piw"><img src="img/01.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_pih"><img src="img/02.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_pih"><img src="img/02.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_piw"><img src="img/01.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_pih"><img src="img/02.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_pih"><img src="img/02.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_piw"><img src="img/01.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_pih"><img src="img/02.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_pih"><img src="img/02.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_piw"><img src="img/01.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_pih"><img src="img/02.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_pih"><img src="img/02.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_piw"><img src="img/01.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_pih"><img src="img/02.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_pih"><img src="img/02.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_piw"><img src="img/01.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_pih"><img src="img/02.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_pih"><img src="img/02.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_piw"><img src="img/01.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_pih"><img src="img/02.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_pih"><img src="img/02.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_piw"><img src="img/01.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_pih"><img src="img/02.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_pih"><img src="img/02.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_piw"><img src="img/01.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_pih"><img src="img/02.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_pih"><img src="img/02.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_piw"><img src="img/01.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_pih"><img src="img/02.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_pih"><img src="img/02.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_piw"><img src="img/01.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_pih"><img src="img/02.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_pih"><img src="img/02.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_piw"><img src="img/01.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_pih"><img src="img/02.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            	<div class="pp_p">
+                	<div class="pp_pih"><img src="img/02.png" draggable="true" ondragstart="drag(event)"></div>
+                    <a href="enlarge.html" target="_blank" class="pp_pzoom"></a>
+                </div>
+            </div>
+        </div> 
+        <script>
+		$(".pp_p").mouseover(function(){
+            if($(this).hasClass("p_act")){return;}
+			$(this).children(".pp_piw,.pp_pih").css("box-shadow","none")
+			});
+		$(".pp_p").mouseout(function(){
+            if($(this).hasClass("p_act")){return;}
+			$(this).children(".pp_piw,.pp_pih").css("box-shadow","0px 0px 10px rgba(0,0,0,.4)")
+			});
+		$(".pp_piw,.pp_pih").click(function(){
+			$(this).parent().toggleClass('p_act');
+			});
+		$(".pp_piw,.pp_pih").click(function(){
+			$(this).toggleClass('pp_act');
+			});
+		</script>
+
+        <div class="xc_bz">
+            <div class="bz_text">相册备注：</div>
+            <textarea class="bz_teare"></textarea>
+        </div>
+        <div class="pp_bot"><a href="#">删除所选照片</a></div>
+    </div>
+
+</div> 
+
+<script>
+$("#cc_zp").click(function(){//此产品相册弹层效果
+	$(".pp_tc2").animate({left:'290px',opacity:'1'});
+	});
+$("#pp_c2").click(function(){//此产品相册弹层效果
+	$(".pp_tc2").animate({left:'-275px',opacity:'0'});
+	});
+//$(".pc").click(function(){
+//	$(this).toggleClass("pc_act");
+//	});
+//$("#pc_add").click(function(){
+//	$(".pc_act").remove();
+//	});
+</script>
+<script type="text/javascript">
+$(window).load(function(){//此产品相册内容高度
+	CGWH();
+ });
+
+$(window).resize(function() {
+	CGWH();
+});
+function CGWH() {
+	var CGH=$(window).height();
+	var CGcH= parseInt(CGH) -610;
+	$("#pcb").css("height", CGcH);	
+}
+
+</script>
+
+<script><!--左侧内容脚本 -->
+$(".cz_top").click(function(){
+	$(this).toggleClass('arw_up');
+	$(".cz_top_nr").slideToggle();
+	});
+$(".cyp").click(function(){
+	$(".cz_btn2").hide().stop();
+	$(".cz_btn1").show().stop();
+	});
+$("#qx").click(function(){
+	$(".cz_btn1").hide().stop();
+	$(".cz_btn2").show().stop();
+	});
+$(".cyp").click(function(){
+	$(this).toggleClass('cyp_act');
+	});
+$("#qx").click(function(){
+	$(".cyp").removeClass('cyp_act');
+	});
+$(".cyp_del").click(function(){
+	$(this).parent().parent().remove();
+	})
+</script>
+
+<!--放大图-->
+<div class="zhezhao">
+    <div class="zz_pic">
+        <img src="img/01.png" alt="">
+    </div>
+    <div class="zz_btn close"></div>
+    <div class="zz_btn zz_del"></div>
+</div>
+</body>
+</html>

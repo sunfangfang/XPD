@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+
+.com_text{
+    width: 150px;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    line-height: 50px;
+    color: #cacaca;
+    font-size: 18px;
+}
+.com_con{
+    background: #131313;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
+.com_block{
+    width: 50%;
+    padding:0 20px;
+    padding-top: 20px;
+    float: left;
+    /*margin-bottom: 20px;*/
+}
+
+/*.com_pic{*/
+    /*width: 100%;*/
+    /*border: 4px solid #3b3b3b;*/
+    /*background: #3b3b3b;*/
+    /*border-radius: 4px;*/
+    /*position: relative;*/
+    /*text-align: center;*/
+/*}*/
+.close{
+    position: absolute;
+    top:-4px;
+    right: -4px;
+    width:30px;
+    height: 28px;
+    background-color: rgba(46,44,46,0.9);
+    background-image: url(../img/close.png);
+    border-radius: 4px;
+    cursor: pointer;
+}
+.close:hover{
+    background-image: url(../img/close01.png);
+}
+/*.com_pic img{*/
+    /*width: auto;*/
+    /*height: 100%;*/
+    /*max-width: 100%;*/
+    /*max-height: 100%;*/
+/*}*/
+.con_pic_mark{
+    width: 100%;
+    height: 68px;
+    position: relative;
+}
+.del{
+    width: 30px;
+    height: 28px;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    margin: auto;
+    background-color: #2e2c2e;
+    background-image:url("../img/delete.png");
+    cursor: pointer;
+    border-radius: 4px;
+}
+.del:hover{
+    background-image: url("../img/delete01.png");
+}
+
+/*---------------奇数排列------------------*/
+
+.com_block2{
+    width: 33.333%;
+    padding:0 20px;
+    float: left;
+    padding-top: 20px;
+    /*margin-bottom: 20px;*/
+}
+
+@media screen and (max-width: 1024px) {
+    .com_block,.com_block2{
+        width: 100%;
+    }
+}
+/*----------------------------------------------*/
+.com_pic{
+    width: 100%;
+    border: 4px solid #3b3b3b;
+    background: #3b3b3b;
+    border-radius: 4px;
+    position: relative;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+.com_pic img{
+    width: auto;
+    height: auto;
+    top: -50%;
+    left: -50%;
+}
